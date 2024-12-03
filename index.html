@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .top-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .chart-container {
+            height: 300px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .map-container {
+            height: 400px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+        .filter-section h3 {
+            margin-bottom: 10px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Filters</h2>
+            <div class="filter-section">
+                <h3>Country</h3>
+                <select>
+                    <option>All Countries</option>
+                    <option>USA</option>
+                    <option>India</option>
+                    <option>UK</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Age Range</h3>
+                <input type="range" min="0" max="100" value="50">
+                <span>0-50 years</span>
+            </div>
+
+            <div class="filter-section">
+                <h3>Time Period</h3>
+                <select>
+                    <option>Last 24 Hours</option>
+                    <option>Last Week</option>
+                    <option>Last Month</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-row">
+                <div class="card">
+                    <h3>Overall Sentiment</h3>
+                    <div class="chart-container">
+                        [Pie Chart]
+                        Positive: 45%
+                        Negative: 25%
+                        Neutral: 30%
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Age Distribution</h3>
+                    <div class="chart-container">
+                        [Bar Chart]
+                        Age Groups vs. Sentiment
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Temporal Analysis</h3>
+                    <div class="chart-container">
+                        [Line Chart]
+                        Time vs. Sentiment
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Geographic Distribution</h3>
+                <div class="map-container">
+                    [World Map]
+                    Sentiment Heat Map
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Detailed Analysis</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="chart-container">
+                        [Bar Chart]
+                        Country-wise Breakdown
+                    </div>
+                    <div class="chart-container">
+                        [Line Chart]
+                        Trend Analysis
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
